@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive portfolio Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!-----Font Awesome cdn Font Icon css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="jerom-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-l"></i>
+                    <h1 style="color: #fff;">ENIN <h2>NICHOLES</h2></h1>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Portfolio</a></li>
+                        <li><a href="resume.png">Resume</a></li>
+                        <li><a href="leninnicholes@gmail.com">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="jerom-pic">
+                    <img src="lenin.png" alt="profile pic">
+                </div>
+                <div class="jerom-text jerom">
+                    <h5>Hi I'm <span class="input">Frontend developer</span></h5>
+                    <br>
+                    <h1 style="color: #fff;"><span style="color: aqua;">L</span>enin<span style="color: aqua;"> N</span>icholes</h1>
+                    <br>
+                    <p>Hello ! I'm Lenin Nicholes, a passionate and dedicated frontend
+                        developer with a knack for creating stunning and user-friendly
+                        web experiences. With experience under my belt, I have honed my
+                        skills in HTML, CSS to craft visually appealing and responsive 
+                        websites.</p><br>
+                    
+
+<!----extra-->
+<div class="jerom">
+    <div class="tab-title">
+        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links" onclick="opentab('education')">Education</p>
+        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+    </div>
+    <div class="ab">
+    <div class="tab-contains active-tab" id="skills">
+        <ul>
+            <li style="color: #e5e5e5;"><span>Web Development</span><br>Designing Web Interface and Multipage with responsive</li>
+            <li style="color: #e5e5e5;"><span>Content Creator</span><br>Creative Ideas for Media,Designing a page with innovative ideas</li>
+            <li style="color: #e5e5e5;"><span>Front-End,Java,Python</span><br>Strong in Basics of These Languages By Well Known Person</li>
+        </ul>
+    </div>
+    <div class="tab-contains" id="education">
+        <ul>
+            <li style="color: #e5e5e5;"><span>2021 - 2024</span><br>BCA Ananda College Devakottai</li><br>
+            <li style="color: #e5e5e5;"><span>2021</span><br>Infan Jesus Matric Hr.Sec. School Devakottai</li><br>
+        </ul>
+    </div>
+    <div class="tab-contains" id="experience">
+        <ul>
+            <li style="color: #e5e5e5;"><span>Fresher</span><br></li>
+            <li style="color: #e5e5e5;">As a fresher in frontend development, I have gained valuable hands-on experience in building engaging websites and collaborating effectively in teams. With a strong foundation in HTML, CSS, and JavaScript, 
+                I am eager to continue learning and contribute to innovative projects.</li><br>
+        </ul>
+    </div>
+</div>
+                        
+                            
+                    
+<!----extra end-->
+                    
+                    <div class="btn-group">
+                        <a class="btn active" href="resume.png" download>Download CV</a>
+                        <a href="leninnicholes19@gmail.com" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>             
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---typed JS for Typing Text Effect-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+
+    <script>
+
+        /** Creating button click show hide navbar **/
+
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open")
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","Ux Designer","Web Developer"],
+            typeSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+</script>
+
+<script>
+        var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontains= document.getElementsByClassName("tab-contains");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontain of tabcontains){
+            tabcontain.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    </script>
+</body>
+</html>

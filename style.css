@@ -1,0 +1,344 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins,sans-serif;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+.jerom{
+    margin-left: 20px;
+}
+
+.jerom-header{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #222;
+}
+
+.wrapper{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i{
+    height: 45px;
+    width: 45px;
+    background-color: aqua;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.logo .logo-text{
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+nav .togglebtn{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span{
+    display: block;
+    background-color: aqua;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+nav .navlinks{
+    display: inline-block;
+}
+
+nav .navlinks li{
+    display: inline-block;
+}
+
+nav .navlinks li a{
+    color: #e5e5e5;
+    margin-right: 2.5rem;
+}
+
+nav .navlinks li a:hover{
+    color: aqua;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+
+.container  .jerom-pic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
+}
+
+.jerom-pic img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    transform: scale(1.3);
+}
+
+.jerom-pic img:hover{
+    transform: scale(1.5);
+}
+
+.jerom-text{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jerom-text h5{
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.jerom-text h5 span{
+    color: aqua;
+    font-size: 16px;
+}
+
+.jerom-text h1{
+    font-size: 3rem;
+}
+
+.jerom-text p{
+    color: #e5e5e5;
+}
+
+.btn-group{
+    margin: 45px 0;
+}
+
+.btn-group .btn{
+    border-color: #d5d5d5;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+
+.btn.active{
+    border-color: aqua;
+}
+
+.jerom-text .social i{
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.jerom-text .social i:hover{
+    color: aqua;
+    transform: rotate(360deg);
+}
+
+
+/****extra****/
+
+.tab-title{
+    align-items: center;
+    display: flex;
+    margin: 20px 0 40px;
+    
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: aqua;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contains ul li{
+    list-style: none;
+    margin: 20px 0 40px;
+    padding-left: 7%;
+
+}
+.tab-contains ul li span{
+    color: aqua;
+    font-size: 14px;
+}
+
+.tab-contains{
+    display: none;
+    margin-left: -40px;
+}
+.tab-contains.active-tab{
+    display: block
+}
+
+
+
+.logo h2{
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 2.5px aqua,
+                 0 0 5px aqua,
+                 0 0 10px aqua,
+                 0 0 10px aqua,
+                 0 0 20px aqua;
+    animation: animateh2 5s linear infinite;
+}
+
+
+/* Responsive Design & Displaying Navbar for Small Screen */
+
+@media(max-width:930px)
+{
+    nav .togglebtn{
+        display: initial;
+    }
+
+    /* for toggle button */
+
+    .click{
+        top: 45px;
+    }
+
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child{
+        transform: rotate(-45deg);
+    }
+
+    .click span:nth-child(2)
+    {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .navlinks{
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+
+    nav .navlinks li{
+        display: block;
+    }
+
+    nav .navlinks li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    nav .navlinks.open{
+        right: 0;
+    }
+
+}
+
+@media(max-width:930px){
+
+    .container{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .jerom-text{
+        padding: 40px 0px;
+    }
+}
+
+@keyframes animateh2
+{
+    100%
+    {
+        transform: scaleY(0.5) translateX(0);
+    }
+    100%
+    {
+        transform: scaleY(0) translateX();
+    }
+    100%,10%
+    {
+        transform: scaleY(1) translateX(calc(15px - 0px));
+    }
+}
+
